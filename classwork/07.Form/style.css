@@ -1,35 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./background/b84f4195a6d33c93d01111287c0c7b7e.jpg); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.myForm{
+    background-image: url(./background/b84f4195a6d33c93d01111287c0c7b7e.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+
 .myForm {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
 }
 
 form {
-    margin-top: 150px;
-    border: 1px dashed #000000;
     padding: 20px;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    border: 1px dashed rgba(30, 30, 30, 0.571);
+    background-color: rgba(0, 0, 0, 0.59);
+    text-align: center;
+    border-radius: 10px;
 }
 
 label {
     margin-top: 10px;
-    margin-bottom: 3px;
+    display: block;
+    color: #8b8b8b;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style:inherit
+    
 }
 
 input {
     height: 30px;
+    margin-bottom: 10px;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgb(10, 0, 11);
+   background-origin: inherit;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    background-image: url("./background/b84f4195a6d33c93d01111287c0c7b7e.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
+
 
 button {
-    margin-top: 10px;
-    background-color: #1c6502;
-    color: #ffffff;
+    background-color: #650202;
+    color: #eb2020;
     height: 40px;
+    width: calc(100% - 10px);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    background: #1b004d;
+    color: #4d1919;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #039d22,
+                0 0 25px #000
+                0 0 50px #00482a,
+                0 0 100px #4700a0;
 }
 
-h3{
-    text-align: center;
+button:hover {
+    background-color: #700101;
+    filter: brightness(1.2); 
 }
+
+h3 {
+    
+        color: #7f0000; 
+        font-family: Arial, Helvetica, sans-serif, sans-serif;
+       font-size: 24px;
+        font-weight:bold; 
+        text-align: center;
+        text-transform: uppercase; 
+        margin-bottom: 20px; 
+
+    
+}
+.btn {
+    margin: 10px;
+    padding: 1px 4px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 0%;
+    height:1%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .btn::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ab0000, #9c4600, #a4a100, #33b400,
+      #008f77, #00178a, #850068, #36004d
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 900%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 100px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn:hover::before {
+    opacity: 1;
+  }
+  
+  .btn:active:after {
+    background: transparent;
+  }
+  
+  .btn:active {
+    color: #000;
+    font-weight: bold;
+  }
