@@ -7,14 +7,22 @@ const password = document.querySelector('#password')
 
 const form = document.querySelector('#userForm')
 
+const db = []
 
 form.addEventListener('submit', (event) => {
 
     event.preventDefault()
-    console.log(username.value);
-    console.log(email.value);
-    console.log(password.value);
-    console.log(surname.value);
+
+    const user = {
+        username: username.value,
+        email: email.value,
+        password: password.value,
+        surname: surname.value
+    }
+
+    db.push(user)
+    console.log('database', db);
+
 })
 
 
